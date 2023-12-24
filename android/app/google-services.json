@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "967504304897",
+    "project_id": "todoinfiniteproject",
+    "storage_bucket": "todoinfiniteproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:967504304897:android:11761944b332fbcd5fd900",
+        "android_client_info": {
+          "package_name": "com.example.todonewappforinfnite"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3uUPPS1Ws8BQ-carwRY4OUxlN4zGMcHw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
