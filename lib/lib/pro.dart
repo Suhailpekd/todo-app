@@ -9,11 +9,8 @@ class Task with ChangeNotifier {
   }
 
   void decriment() {
-    if (changecount44 >= 0) {
-      changecount44--;
-    }
     changecount44--;
-
+    changecount44 >= 0;
     notifyListeners();
   }
 }
