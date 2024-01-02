@@ -17,8 +17,6 @@ class _OthertasksState extends State<Othertasks> {
     return querySnapshot.docs;
   }
 
-  
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,8 +54,19 @@ class _OthertasksState extends State<Othertasks> {
                                   padding: const EdgeInsets.only(right: 25),
                                   child: Icon(Icons.update),
                                 ),
-                                Icon(
-                                  Icons.delete,
+                                InkWell(
+                                  onTap: () async {
+                                    await FirebaseFirestore.instance
+                                        .collection('other')
+                                        .doc(documents[index].id)
+                                        .delete();
+                                    setState(() {
+                                      documents.removeAt(index);
+                                    });
+                                  },
+                                  child: Icon(
+                                    Icons.delete,
+                                  ),
                                 ),
                               ],
                             ),
@@ -82,44 +91,6 @@ class _OthertasksState extends State<Othertasks> {
                                           MaterialPageRoute(
                                             builder: (context) => MyWidget(),
                                           ));
-
-                                      // showDialog(
-                                      //   context: context,
-                                      //   builder: (context) => Column(
-                                      //     children: [
-                                      //       Padding(
-                                      //         padding:
-                                      //             const EdgeInsets.all(28.0),
-                                      //         child: Container(
-                                      //           height: 500,
-                                      //           width: double.infinity,
-                                      //           decoration: BoxDecoration(
-                                      //               color: Colors.white,
-                                      //               borderRadius:
-                                      //                   BorderRadius.circular(
-                                      //                       15)),
-                                      //           child: Column(
-                                      //             children: [
-                                      //               Text("Add Your Task"),
-                                      //               Expanded(
-                                      //                 child: SizedBox(
-                                      //                     child: TextFormField(
-                                      //                   onChanged: (value) =>
-                                      //                       task = value,
-                                      //                 )),
-                                      //               ),
-                                      //               ElevatedButton(
-                                      //                   onPressed: () {
-                                      //                     function1();
-                                      //                   },
-                                      //                   child: Text("ADD"))
-                                      //             ],
-                                      //           ),
-                                      //         ),
-                                      //       ),
-                                      //     ],
-                                      //   ),
-                                      // );
                                     },
                                     child: Icon(Icons.add)),
                               ],
