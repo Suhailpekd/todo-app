@@ -1,5 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:todonewappforinfnite/lib/pro.dart';
 
 import 'addnewtask.dart';
 
@@ -19,6 +21,7 @@ class _OthertasksState extends State<Othertasks> {
 
   @override
   Widget build(BuildContext context) {
+    var proride = Provider.of<Task>(context);
     return Scaffold(
       body: FutureBuilder<List<DocumentSnapshot>>(
         future: getData(),
@@ -56,6 +59,8 @@ class _OthertasksState extends State<Othertasks> {
                                 ),
                                 InkWell(
                                   onTap: () async {
+                                    proride.decriment();
+
                                     await FirebaseFirestore.instance
                                         .collection('other')
                                         .doc(documents[index].id)

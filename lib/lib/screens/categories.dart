@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:todonewappforinfnite/lib/pro.dart';
 import 'package:todonewappforinfnite/lib/screens/hometasks.dart';
 import 'package:todonewappforinfnite/lib/screens/designtasks.dart';
 import 'package:todonewappforinfnite/lib/screens/othertaskspage.dart';
@@ -26,6 +28,7 @@ class _CatogoriesState extends State<Catogories> {
 
   @override
   Widget build(BuildContext context) {
+    var proride = Provider.of<Task>(context);
     return Scaffold(
         body: ListView(children: [
       ListTile(
@@ -94,7 +97,9 @@ class _CatogoriesState extends State<Catogories> {
                         Icon(Icons.task),
                         Text("Other"),
                         Text("tasks"),
-                        Text("10")
+                        Text(
+                          "${proride.changcount22}",
+                        )
                       ],
                     ),
                     height: 105,

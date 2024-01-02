@@ -1,5 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:todonewappforinfnite/lib/pro.dart';
 import 'package:todonewappforinfnite/lib/screens/othertaskspage.dart';
 
 class MyWidget extends StatefulWidget {
@@ -19,6 +21,7 @@ class _MyWidgetState extends State<MyWidget> {
 
   @override
   Widget build(BuildContext context) {
+    var proride = Provider.of<Task>(context);
     return Scaffold(
       body: SafeArea(
         child: Container(
@@ -36,8 +39,9 @@ class _MyWidgetState extends State<MyWidget> {
                 )),
               ),
               ElevatedButton(
-                  onPressed: () {
-                    function1();
+                  onPressed: () async {
+                    proride.incriment();
+                    await function1();
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
