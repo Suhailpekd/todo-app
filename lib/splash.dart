@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'package:todonewappforinfnite/lib/screens1login.dart';
+import 'package:todonewappforinfnite/lib/screens/screens1login.dart';
 
 class Splash_ extends StatefulWidget {
   const Splash_({super.key});

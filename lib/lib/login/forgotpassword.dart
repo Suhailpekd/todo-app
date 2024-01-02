@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:todonewappforinfnite/lib/createaaccount.dart';
+import 'package:todonewappforinfnite/lib/screens/createaaccount.dart';
 
 class Forgotpassword extends StatefulWidget {
   const Forgotpassword({super.key});

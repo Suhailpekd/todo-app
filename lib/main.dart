@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:todonewappforinfnite/firebase_options.dart';
-import 'package:todonewappforinfnite/lib/screens1login.dart';
+import 'package:todonewappforinfnite/lib/screens/screens1login.dart';
 import 'package:todonewappforinfnite/splash.dart';
 
 Future<void> main() async {

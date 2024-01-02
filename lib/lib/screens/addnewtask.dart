@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:todonewappforinfnite/lib/othertaskspage.dart';
+import 'package:todonewappforinfnite/lib/screens/othertaskspage.dart';
 
 class MyWidget extends StatefulWidget {
   const MyWidget({super.key});

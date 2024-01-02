@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:todonewappforinfnite/hometasks.dart';
-import 'package:todonewappforinfnite/lib/designtasks.dart';
-import 'package:todonewappforinfnite/lib/othertaskspage.dart';
-import 'package:todonewappforinfnite/lib/sporttasks.dart';
+import 'package:todonewappforinfnite/lib/screens/hometasks.dart';
+import 'package:todonewappforinfnite/lib/screens/designtasks.dart';
+import 'package:todonewappforinfnite/lib/screens/othertaskspage.dart';
+import 'package:todonewappforinfnite/lib/screens/sporttasks.dart';
 
 class Catogories extends StatefulWidget {
   const Catogories({super.key});
